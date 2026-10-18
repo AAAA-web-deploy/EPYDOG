@@ -1,0 +1,31 @@
+{
+  "name": "eepy-dog-ethereum-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent Next.js recreation of the observable Eepy Dog site experience with user-supplied and licensed media.",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0",
+    "lint": "eslint .",
+    "check:assets": "node scripts/check-assets.mjs",
+    "typecheck": "tsc --noEmit",
+    "tracker": "node --experimental-strip-types server/index.ts",
+    "tracker:test": "node --experimental-strip-types --test server/app.test.ts"
+  },
+  "dependencies": {
+    "next": "^15.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.6",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "typescript": "^5.9.3",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "^15.5.6",
+    "@eslint/eslintrc": "^3.3.1"
+  }
+}
