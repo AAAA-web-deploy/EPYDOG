@@ -293,18 +293,32 @@ export default function EepyExperience() {
             </div>
           </div>
           <div className="sticky">the nap zone is quiet right now...<small>asleep for <span>{hours}h {minutes}m</span>. pls do not wake.</small></div>
-          <dl className="token-facts">
-            {([
-              ["Name", site.token.name],
-              ["Ticker", site.token.ticker],
-              ["Total Supply", site.token.totalSupply],
-              ["Buy/Sell Tax", site.token.buySellTax],
-              ["Ownership", site.token.ownership],
-              ["Renounce", site.token.renounce],
-            ] as const).map(([label, value]) => (
-              <div key={label}><dt>{label}</dt><dd>{value || "coming soon"}</dd></div>
-            ))}
-          </dl>
+          <div className="notebook token-notebook">
+            <div className="nb">
+              <div>
+                <h2>the token</h2>
+                <ul>
+                  <li>name: {site.token.name}</li>
+                  <li>ticker: {site.token.ticker}</li>
+                  <li>total supply: {site.token.totalSupply || "coming soon"}</li>
+                  <li>buy/sell tax: {site.token.buySellTax || "coming soon"}</li>
+                  <li>ownership: {site.token.ownership || "coming soon"}</li>
+                  <li>renounce: {site.token.renounce || "coming soon"}</li>
+                  <li>CA: {hasValidContract ? contractDisplay : "coming soon"}
+                    <button className={`plank slat token-copy${copied ? " done" : ""}`} type="button" onClick={() => void copyContract()} aria-label="Copy contract address">
+                      {copied ? "copied" : "copy"}
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <figure className="polaroid">
+                <span className="tape" aria-hidden="true" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={asset(site.logo)} alt="Sleepy Dogs Club logo" />
+                <figcaption>{`$${site.ticker}`}</figcaption>
+              </figure>
+            </div>
+          </div>
         </section>
         <section className="scene gut" id="notebook" data-section="notebook" aria-labelledby="who-h">
           <span className="label slat">the club notebook</span>
