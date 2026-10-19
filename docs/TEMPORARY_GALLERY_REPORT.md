@@ -20,9 +20,7 @@ Checked locally on http://127.0.0.1:4321/: desktop flow above, a 390px-wide layo
 
 ## What is temporary
 
-Photos live in React state as blob URLs. They disappear when the visitor refreshes or closes the tab. The page says so under **Your Temporary Nap Gallery**:
-
-> Photos added here are visible only in your browser and disappear when you leave or refresh. This is a trial feature.
+Photos live in React state as blob URLs. They disappear when the visitor refreshes or closes the tab. The gallery heading stays; the extra trial sentences under it have been removed.
 
 Music volume can still use `localStorage`. Photo bytes do not.
 

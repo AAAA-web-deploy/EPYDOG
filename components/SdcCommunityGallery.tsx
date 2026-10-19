@@ -192,13 +192,11 @@ export default function SdcCommunityGallery() {
       </div>
       <div className={styles.galleryHead} id="sdc-trial-gallery">
         <div>
-          <p className={styles.kicker}>ONLY ON THIS SCREEN</p>
           <h3>Your Temporary Nap Gallery<span>.</span></h3>
         </div>
       </div>
-      <p className={styles.trialNote}>Photos added here are visible only in your browser and disappear when you leave or refresh. This is a trial feature.</p>
       {photos.length === 0 ? (
-        <div className={styles.placeholder}><strong>No temporary photos yet.</strong><p>Add a sleeping dog above. It will show here until you refresh or close the page.</p></div>
+        <div className={styles.placeholder}><strong>No temporary photos yet.</strong></div>
       ) : (
         <div className={styles.photoGrid}>
           {photos.map((photo) => (

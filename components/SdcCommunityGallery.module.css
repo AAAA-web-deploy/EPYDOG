@@ -70,7 +70,6 @@
 .photoActions { display:flex; gap:11px; align-items:center; padding:6px 3px 0; }
 .photoActions button { border:1px solid #586174; border-radius:5px; background:#edf1ff; padding:9px 12px; font-size:14px; font-weight:700; }
 .photoActions button.remove { background:#fff; color:#626679; }
-.trialNote { max-width:1500px; margin:0 auto 22px; font-size:17px; line-height:1.5; }
 .scrapbookHead { display:flex; justify-content:space-between; flex-wrap:wrap; align-items:end; gap:8px; max-width:1500px; margin:0 auto 20px; }
 .scrapbookHead h3 { font-size:clamp(26px,3.4vw,45px); margin:0; }
 .scrapbookHead p { font-family:var(--font-hand,cursive); font-size:18px; margin:0; }
