@@ -15,7 +15,17 @@ const scrapbook = [
   { src: '/memes/05.jpg', caption: 'do not disturb' },
   { src: '/memes/06.jpg', caption: 'dreaming of snacks' },
   { src: '/memes/07.jpg', caption: 'recharging' },
+  { src: '/sdc/scrapbook/sleeping_shiba_on_a_cozy_sofa.png', caption: 'cozy sofa nap' },
+  { src: '/sdc/scrapbook/sunlit_shiba_inu_nap.png', caption: 'sunlit belly nap' },
+  { src: '/sdc/scrapbook/sleepy_shiba_inu_by_the_window.png', caption: 'window nap' },
+  { src: '/sdc/scrapbook/sleepy_shiba_inu_road_trip.png', caption: 'road trip nap' },
+  { src: '/sdc/scrapbook/sleepy_shiba_s_cozy_slipper_nap.png', caption: 'slipper nap' },
 ];
+
+function scrapbookDownloadName(src: string, index: number) {
+  const ext = src.toLowerCase().endsWith('.png') ? 'png' : 'jpg';
+  return `sleepy-dog-scrapbook-${index + 1}.${ext}`;
+}
 
 type TrialPhoto = {
   id: string;
@@ -218,7 +228,7 @@ export default function SdcCommunityGallery() {
           <article key={photo.src} className={styles.scrapbookCard}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={asset(photo.src)} alt={`Sleepy dog scrapbook photo ${index + 1}: ${photo.caption}`} loading="lazy" />
-            <div><span>{photo.caption}</span><button type="button" onClick={() => void downloadSample(asset(photo.src), `sleepy-dog-scrapbook-${index + 1}.jpg`, photo.caption)} aria-label={`Download scrapbook photo ${index + 1}`}>Download Photo</button></div>
+            <div><span>{photo.caption}</span><button type="button" onClick={() => void downloadSample(asset(photo.src), scrapbookDownloadName(photo.src, index), photo.caption)} aria-label={`Download scrapbook photo ${index + 1}`}>Download Photo</button></div>
           </article>
         ))}
       </div>

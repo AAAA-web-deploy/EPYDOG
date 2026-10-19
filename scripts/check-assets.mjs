@@ -8,6 +8,9 @@ const expected = [
   'brand/replace-with-your-logo.svg',
   'sdc/brand/logo.png','sdc/brand/logo-circle.svg','sdc/brand/favicon.ico','sdc/brand/favicon-32.png','sdc/brand/apple-touch-icon.png',
   'sdc/brand/sleepy-pack-art.jpg','sdc/social/open-graph-1200x630.jpg',
+  'sdc/scrapbook/sleeping_shiba_on_a_cozy_sofa.png','sdc/scrapbook/sunlit_shiba_inu_nap.png',
+  'sdc/scrapbook/sleepy_shiba_inu_by_the_window.png','sdc/scrapbook/sleepy_shiba_inu_road_trip.png',
+  'sdc/scrapbook/sleepy_shiba_s_cozy_slipper_nap.png',
   'audio/01-leaves-on-the-path.mp3','audio/02-bench-for-one.mp3',
   'audio/03-rainy-window.mp3','audio/04-thinking-about-her.mp3'
 ];
