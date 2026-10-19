@@ -282,6 +282,30 @@ export default function EepyExperience() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className="sdc-art" src={asset("/sdc/brand/sleepy-pack-art.jpg")} alt="Illustration of three sleeping puppies. Decorative art, not a community photo." width="640" height="480" />
         </section>
+        <section className="scene napspot gut" id="nap" data-section="nap" aria-label="the nap zone">
+          <span className="label slat">the nap zone</span>
+          <div className="napframe brick">
+            <div className="stage2">
+              <video autoPlay muted loop playsInline preload="metadata" poster={asset(media.napPoster)} aria-label="Demo footage of a puppy asleep on a couch. Not a club submission.">
+                <source src={asset(media.napVideo)} type="video/mp4" />
+              </video>
+              <div className="zzz" aria-hidden="true"><b>z</b><b>z</b><b>Z</b></div>
+            </div>
+          </div>
+          <div className="sticky">the nap zone is quiet right now...<small>asleep for <span>{hours}h {minutes}m</span>. pls do not wake.</small></div>
+          <dl className="token-facts">
+            {([
+              ["Name", site.token.name],
+              ["Ticker", site.token.ticker],
+              ["Total Supply", site.token.totalSupply],
+              ["Buy/Sell Tax", site.token.buySellTax],
+              ["Ownership", site.token.ownership],
+              ["Renounce", site.token.renounce],
+            ] as const).map(([label, value]) => (
+              <div key={label}><dt>{label}</dt><dd>{value || "coming soon"}</dd></div>
+            ))}
+          </dl>
+        </section>
         <section className="scene gut" id="notebook" data-section="notebook" aria-labelledby="who-h">
           <span className="label slat">the club notebook</span>
           <div className="notebook">
@@ -302,18 +326,6 @@ export default function EepyExperience() {
               </figure>
             </div>
           </div>
-        </section>
-        <section className="scene napspot gut" id="nap" data-section="nap" aria-label="the nap zone">
-          <span className="label slat">the nap zone</span>
-          <div className="napframe brick">
-            <div className="stage2">
-              <video autoPlay muted loop playsInline preload="metadata" poster={asset(media.napPoster)} aria-label="Demo footage of a puppy asleep on a couch. Not a club submission.">
-                <source src={asset(media.napVideo)} type="video/mp4" />
-              </video>
-              <div className="zzz" aria-hidden="true"><b>z</b><b>z</b><b>Z</b></div>
-            </div>
-          </div>
-          <div className="sticky">the nap zone is quiet right now...<small>asleep for <span>{hours}h {minutes}m</span>. pls do not wake.</small></div>
         </section>
         <section className="scene gut" id="corkboard" data-section="corkboard" aria-label="the nap gallery">
           <span className="label slat">the nap gallery</span>

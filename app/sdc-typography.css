@@ -30,7 +30,7 @@
 .sdc-hero-identity { text-align: center; color: #fff; text-shadow: 0 2px 12px rgba(20, 30, 50, .65); max-width: min(960px, calc(100% - 32px)); }
 .sdc-hero-identity h1 { margin: 0; font-family: var(--font-ui), "Courier New", monospace; font-weight: 600; font-size: clamp(48px, 8vw, 104px); line-height: .95; letter-spacing: -.03em; text-wrap: balance; }
 .intro__screen .sdc-entry-ticker { margin: 0; font-size: clamp(14px, 3.2vw, 18px); }
-.sdc-brand .sdc-header-ticker { margin-left: 4px; }
+.sdc-brand .sdc-header-ticker { margin-left: 4px; font-size: clamp(18px, 2vw, 26px); padding: 8px 12px; }
 @media (max-width: 900px) {
   .sdc-brand .sdc-header-ticker { display: none; }
 }

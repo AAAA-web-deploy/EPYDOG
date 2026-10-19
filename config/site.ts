@@ -31,6 +31,14 @@ export const site = {
       ["club rule", "let sleeping dogs lie"],
     ],
   },
+  token: {
+    name: "Sleepy Dogs Club",
+    ticker: "$ZZZPUPS",
+    totalSupply: "",
+    buySellTax: "",
+    ownership: "",
+    renounce: "",
+  },
 } as const;
 
 export const hasValidContract = /^0x[a-fA-F0-9]{40}$/.test(site.contractAddress);
