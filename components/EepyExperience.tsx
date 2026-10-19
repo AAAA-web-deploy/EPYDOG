@@ -261,7 +261,7 @@ export default function EepyExperience() {
         </nav>
         <div className="sdc-hero-identity">
           <h1>Sleepy Dogs Club</h1>
-          <p className="sdc-hero-ticker">$ZZZPUPS <span>on Ethereum</span></p>
+          <p className="sdc-hero-ticker">$ZZZPUPS</p>
         </div>
         <div className="frame brick">
           <div className="stage">
@@ -345,9 +345,6 @@ export default function EepyExperience() {
         </div>
         <p className="sdc-signoff">see you after the next nap.</p>
         <p className="sdc-footer-ticker">{`${site.network} · $${site.ticker}`}</p>
-        <p>{site.quietLine}</p>
-        <p>{site.memeNote}</p>
-        <p>{site.footerNote}</p>
       </footer>
       <div className={`radio slat${playing ? " on" : ""} ${volumeClass}`} role="region" aria-label="nap.fm music player">
         <button className="radio__screen" type="button" onClick={toggle} aria-label={playing ? "Pause" : "Play"}>

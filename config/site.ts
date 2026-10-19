@@ -31,10 +31,6 @@ export const site = {
       ["club rule", "let sleeping dogs lie"],
     ],
   },
-  quietLine: "quiet please. the club is napping.",
-  memeNote: "ZZZPUPS is an independent, high-risk meme token; joining and sharing dog photos is free and never requires holding tokens.",
-  footerNote:
-    "The photo-sharing community is free to join. $ZZZPUPS is a separate, high-risk Ethereum meme token and is not affiliated with the Solana Eepy Dog team.",
 } as const;
 
 export const hasValidContract = /^0x[a-fA-F0-9]{40}$/.test(site.contractAddress);
