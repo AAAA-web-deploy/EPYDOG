@@ -5,6 +5,7 @@ import { contractDisplay, hasValidContract, site, swapLink, tokenLink } from "@/
 import { media, pictures, tracks } from "@/config/content";
 import { asset } from "@/lib/asset";
 import Analytics from "./Analytics";
+import SdcCommunityGallery from "./SdcCommunityGallery";
 
 const DOTS = 22;
 
@@ -81,6 +82,7 @@ function EnterGate({ onEnter }: { onEnter: () => void }) {
       <div className="intro__box brick">
         <div className="intro__screen">
           <div className="intro__name sdc-wordmark" id="entry-title">sleepy dogs club</div>
+          <p className="sdc-entry-ticker">$ZZZPUPS</p>
           <p className="sdc-tag">the coziest corner of the internet</p>
           <div className="dots" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress} aria-label={`Loading ${progress}%`}>
             {Array.from({ length: DOTS }, (_, index) => (
@@ -243,9 +245,10 @@ export default function EepyExperience() {
           <img src={asset(site.logo)} alt="" width="28" height="28" />
           <span className="sdc-brand__full">sleepy dogs club</span>
           <span className="sdc-brand__short">SDC</span>
+          <strong className="sdc-header-ticker">$ZZZPUPS</strong>
         </a>
         <nav className="corner" aria-label="Sleepy Dogs Club links">
-          <button className="plank slat" type="button" onClick={() => scrollToId("corkboard")}>gallery</button>
+          <button className="plank slat" type="button" onClick={() => scrollToId("sdc-gallery")}>gallery</button>
           <button className="plank slat" type="button" data-link-role="x" onClick={() => openExternal(site.xUrl, "x link coming soon")}>x</button>
           <button className="plank slat" type="button" data-link-role="community" onClick={() => openExternal(site.communityUrl, "community link coming soon")}>community</button>
           <button className={`plank slat cabtn${copied ? " done" : ""}`} type="button" data-link-role="copy" onClick={() => void copyContract()} title={hasValidContract ? "Copy contract address" : "Add your Ethereum contract address in config/site.ts"} aria-label="Copy contract address">
@@ -256,6 +259,10 @@ export default function EepyExperience() {
             </svg>
           </button>
         </nav>
+        <div className="sdc-hero-identity">
+          <h1>Sleepy Dogs Club</h1>
+          <p className="sdc-hero-ticker">$ZZZPUPS <span>on Ethereum</span></p>
+        </div>
         <div className="frame brick">
           <div className="stage">
             <video autoPlay muted loop playsInline preload="metadata" poster={asset(media.parkPoster)} aria-label="Demo park footage of a puppy napping on a bench. Not a club submission.">
@@ -270,7 +277,7 @@ export default function EepyExperience() {
           <p className="sdc-eyebrow">the internet&apos;s coziest dog club</p>
           <h2 id="sdc-intro-title">Every nap deserves a post.</h2>
           <p>{site.hero.subheading} Share a photo of your sleeping dog for free. No wallet required.</p>
-          <button className="plank slat" type="button" onClick={() => scrollToId("corkboard")}>Explore the Nap Gallery</button>
+          <button className="plank slat" type="button" onClick={() => scrollToId("sdc-gallery")}>Explore the Nap Gallery</button>
           <p className="sdc-soon">Photo uploads coming soon</p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className="sdc-art" src={asset("/sdc/brand/sleepy-pack-art.jpg")} alt="Illustration of three sleeping puppies. Decorative art, not a community photo." width="640" height="480" />
@@ -325,6 +332,7 @@ export default function EepyExperience() {
             </div>
           </div>
         </section>
+        <SdcCommunityGallery />
       </main>
       <footer className="foot gut" id="footer" data-section="footer">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -336,7 +344,7 @@ export default function EepyExperience() {
           <button className="plank slat" type="button" data-link-role="etherscan" onClick={() => openExternal(tokenLink, "etherscan link appears when the ethereum CA is set")}>etherscan</button>
         </div>
         <p className="sdc-signoff">see you after the next nap.</p>
-        <p>{`${site.network} · $${site.ticker}`}</p>
+        <p className="sdc-footer-ticker">{`${site.network} · $${site.ticker}`}</p>
         <p>{site.quietLine}</p>
         <p>{site.memeNote}</p>
         <p>{site.footerNote}</p>

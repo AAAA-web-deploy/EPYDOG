@@ -33,6 +33,8 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: /EPYDOG
           NEXT_PUBLIC_SITE_URL: https://aaaa-web-deploy.github.io/EPYDOG
           NEXT_PUBLIC_ANALYTICS_ORIGIN: https://eepydog.103.161.35.238.sslip.io
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

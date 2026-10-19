@@ -3,6 +3,7 @@ import { JetBrains_Mono, Patrick_Hand, Pixelify_Sans } from "next/font/google";
 import { asset, basePath } from "@/lib/asset";
 import { site } from "@/config/site";
 import "./globals.css";
+import "./sdc-typography.css";
 
 const pixel = Pixelify_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-ui" });
 const hand = Patrick_Hand({ subsets: ["latin"], weight: "400", variable: "--font-hand" });

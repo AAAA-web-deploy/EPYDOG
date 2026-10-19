@@ -1,0 +1,36 @@
+/* ADDITIVE BRAND / LEGIBILITY OVERRIDES. Loaded after globals.css. */
+.entry-content { width:min(960px,calc(100% - 34px)) !important; max-width:960px; }
+.entry-word { font-size:clamp(3.1rem, 8.8vw, 8.2rem) !important; letter-spacing:-.07em; line-height:.96; white-space:normal; text-wrap:balance; }
+.entry-description { font-size:clamp(1.15rem,2.3vw,2.1rem) !important; line-height:1.25; max-width:840px; }
+.sdc-entry-ticker { color:#fbd4a1; font-family:var(--font-mono,monospace); font-size:clamp(1.15rem,2.4vw,2.4rem); font-weight:900; letter-spacing:.08em; margin:14px auto 23px; text-align:center; text-shadow:0 2px 14px #141f35aa; }
+.brand-mark { gap:12px; max-width: min(100%, 380px); }
+.brand-mark>span { font-size:clamp(1.08rem,1.8vw,1.8rem)!important; line-height:1.1; font-weight:900; }
+.sdc-header-ticker { display:inline-flex; border:1px solid #394353; font-size:clamp(.85rem,1.15vw,1.1rem); font-family:var(--font-mono,monospace); letter-spacing:.02em; padding:6px 10px; border-radius:6px; background:#dcd8f8; color:#2e3550; }
+.header-nav a { font-size:clamp(.86rem,1.2vw,1.2rem)!important; font-weight:700; }
+.hero-center { max-width:min(95vw,1250px)!important; width:100%; }
+.hero-title { font-size:clamp(3.5rem,9.5vw,10.5rem)!important; line-height:.91!important; letter-spacing:-.072em!important; text-wrap:balance; }
+.hero-kicker { font-size:clamp(.95rem,1.5vw,1.6rem)!important; }
+.hero-subtitle { font-size:clamp(1.2rem,2.7vw,2.4rem)!important; line-height:1.28!important; max-width:740px; margin-left:auto; margin-right:auto; }
+.sdc-hero-ticker { display:inline-block; font-size:clamp(1.55rem,4vw,4rem); font-weight:900; line-height:1.1; font-family:var(--font-mono,monospace); color:#ffe5b9; text-shadow:0 3px 16px rgba(14,26,38,.65); margin:12px 0; letter-spacing:.025em; }
+.sdc-hero-ticker span { color:#fff; }
+.section-overline { font-size:clamp(.9rem,1.2vw,1.15rem)!important; }
+.notebook-paper h2 { font-size:clamp(2.8rem,5vw,5.6rem)!important; line-height:1.05; }
+.paper-paragraphs p, .facts-list li { font-size:clamp(1.18rem,1.65vw,1.65rem)!important; line-height:1.35; }
+.cork-heading h2 { font-size:clamp(3rem,6vw,6rem)!important; }
+.cork-heading p { font-size:clamp(1.2rem,2vw,1.9rem)!important; }
+.site-footer .footer-big { font-size:clamp(3rem,8vw,9rem)!important; line-height:1; word-break:normal; }
+.sdc-footer-ticker { font-size:clamp(1.5rem,3.4vw,3.8rem); color:#e7ce9a; font-family:var(--font-mono,monospace); font-weight:900; display:block; margin:10px 0 20px; }
+@media(max-width:1050px) { .site-header { gap:10px; } .brand-mark { gap:6px; } .sdc-header-ticker { padding:4px 6px; } }
+@media(max-width:780px) { .brand-mark>span { font-size:1rem!important; } .sdc-header-ticker { font-size:.75rem; } .hero-title { font-size:clamp(3.25rem,13vw,6.5rem)!important; } .hero-subtitle { font-size:clamp(1.1rem,4vw,1.5rem)!important; } .entry-word { font-size:clamp(3rem,12vw,6rem)!important; } }
+@media(max-width:420px) { .sdc-header-ticker { display:none; } .hero-title { font-size:clamp(3rem,12.5vw,5rem)!important; } .entry-description { font-size:1.13rem!important; } .sdc-hero-ticker { font-size:1.5rem; } }
+
+@media(max-width:560px) { .entry-content { width:calc(100% - 28px)!important; } .hero-center { top:41%!important; } .sdc-header-ticker { display:none; } .brand-mark>span { font-size:1rem!important; white-space:normal; max-width:180px; } }
+
+/* Current park-page markup. The rules above target an older editorial layout. */
+.sdc-hero-identity { text-align: center; color: #fff; text-shadow: 0 2px 12px rgba(20, 30, 50, .65); max-width: min(960px, calc(100% - 32px)); }
+.sdc-hero-identity h1 { margin: 0; font-family: var(--font-ui), "Courier New", monospace; font-weight: 600; font-size: clamp(48px, 8vw, 104px); line-height: .95; letter-spacing: -.03em; text-wrap: balance; }
+.intro__screen .sdc-entry-ticker { margin: 0; font-size: clamp(14px, 3.2vw, 18px); }
+.sdc-brand .sdc-header-ticker { margin-left: 4px; }
+@media (max-width: 900px) {
+  .sdc-brand .sdc-header-ticker { display: none; }
+}
