@@ -1,0 +1,16 @@
+{
+  "existing-bridge": {
+    "sky": "#7fa7d8",
+    "cement": "#55534f",
+    "bench": "#55654a",
+    "paper": "#efe6d2",
+    "ink": "#2c2620"
+  },
+  "sdc-accent": {
+    "lavender": "#d6c6e8",
+    "biscuit": "#e9bb87",
+    "sage": "#7a9079",
+    "night": "#343a52",
+    "cream": "#fffaed"
+  }
+}

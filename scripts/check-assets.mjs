@@ -6,6 +6,8 @@ const expected = [
   'city-tall.jpg','cement.png','who.jpg','favicon.ico',
   ...Array.from({ length: 7 }, (_, i) => `memes/${String(i + 1).padStart(2,'0')}.jpg`),
   'brand/replace-with-your-logo.svg',
+  'sdc/brand/logo-circle.svg','sdc/brand/favicon.ico','sdc/brand/favicon-32.png','sdc/brand/apple-touch-icon.png',
+  'sdc/brand/sleepy-pack-art.jpg','sdc/social/open-graph-1200x630.jpg',
   'audio/01-leaves-on-the-path.mp3','audio/02-bench-for-one.mp3',
   'audio/03-rainy-window.mp3','audio/04-thinking-about-her.mp3'
 ];

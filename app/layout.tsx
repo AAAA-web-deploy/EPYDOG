@@ -13,11 +13,18 @@ export const metadata: Metadata = {
   title: site.title,
   description: site.description,
   applicationName: site.projectName,
-  icons: { icon: site.logo },
+  icons: {
+    icon: [
+      { url: asset("/sdc/brand/favicon.ico") },
+      { url: asset("/sdc/brand/favicon-32.png"), sizes: "32x32", type: "image/png" },
+      { url: asset(site.logo), type: "image/svg+xml" },
+    ],
+    apple: asset("/sdc/brand/apple-touch-icon.png"),
+  },
   openGraph: {
     title: site.title,
     description: site.description,
-    images: [{ url: "/park-poster.jpg" }],
+    images: [{ url: asset("/sdc/social/open-graph-1200x630.jpg"), width: 1200, height: 630, alt: "Sleepy Dogs Club" }],
     type: "website",
   },
 };

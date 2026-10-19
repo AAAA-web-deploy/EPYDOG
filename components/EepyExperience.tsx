@@ -80,7 +80,8 @@ function EnterGate({ onEnter }: { onEnter: () => void }) {
     <div className={`intro${ready ? " ready" : ""}`} role="dialog" aria-modal="true" aria-labelledby="entry-title">
       <div className="intro__box brick">
         <div className="intro__screen">
-          <div className="intro__name" id="entry-title">eepy</div>
+          <div className="intro__name sdc-wordmark" id="entry-title">sleepy dogs club</div>
+          <p className="sdc-tag">the coziest corner of the internet</p>
           <div className="dots" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress} aria-label={`Loading ${progress}%`}>
             {Array.from({ length: DOTS }, (_, index) => (
               <i key={index} className={index / DOTS < progress / 100 ? "lit" : ""} />
@@ -222,6 +223,9 @@ export default function EepyExperience() {
 
   const hours = Math.floor(asleepFor / 3600);
   const minutes = Math.floor((asleepFor % 3600) / 60);
+  const scrollToId = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  };
   const volumeClass = volume === 0 ? "quiet" : volume < 0.4 ? "low" : "";
   const picture = photoIndex === null ? null : pictures[photoIndex];
 
@@ -234,12 +238,19 @@ export default function EepyExperience() {
       </div>
       <Leaves />
       <header className="hero" id="hero" data-section="hero">
-        <nav className="corner" aria-label="Eepy links">
+        <a className="sdc-brand" href="#notebook">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={asset(site.logo)} alt="" width="28" height="28" />
+          <span className="sdc-brand__full">sleepy dogs club</span>
+          <span className="sdc-brand__short">SDC</span>
+        </a>
+        <nav className="corner" aria-label="Sleepy Dogs Club links">
+          <button className="plank slat" type="button" onClick={() => scrollToId("corkboard")}>gallery</button>
           <button className="plank slat" type="button" data-link-role="x" onClick={() => openExternal(site.xUrl, "x link coming soon")}>x</button>
           <button className="plank slat" type="button" data-link-role="community" onClick={() => openExternal(site.communityUrl, "community link coming soon")}>community</button>
           <button className={`plank slat cabtn${copied ? " done" : ""}`} type="button" data-link-role="copy" onClick={() => void copyContract()} title={hasValidContract ? "Copy contract address" : "Add your Ethereum contract address in config/site.ts"} aria-label="Copy contract address">
             <b>CA</b>
-            <span className="cabtn__val">{contractDisplay}</span>
+            <span className="cabtn__val">{hasValidContract ? contractDisplay : "coming soon"}</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               {copied ? <path d="m5 12 5 5L20 7" /> : <><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M5 15V6a2 2 0 0 1 2-2h8" /></>}
             </svg>
@@ -247,16 +258,25 @@ export default function EepyExperience() {
         </nav>
         <div className="frame brick">
           <div className="stage">
-            <video autoPlay muted loop playsInline preload="metadata" poster={asset(media.parkPoster)} aria-label="Eepy, a chubby golden puppy in a puffy black jacket and earbuds, dozing on a park bench by the river">
+            <video autoPlay muted loop playsInline preload="metadata" poster={asset(media.parkPoster)} aria-label="Demo park footage of a puppy napping on a bench. Not a club submission.">
               <source src={asset(media.parkVideo)} type="video/mp4" />
             </video>
           </div>
         </div>
-        <button className="hint" type="button" onClick={() => document.getElementById("notebook")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" })}>scroll down ↓</button>
+        <button className="hint" type="button" onClick={() => scrollToId("notebook")}>scroll to meet the club ↓</button>
       </header>
       <main>
+        <section className="sdc-intro gut" aria-labelledby="sdc-intro-title">
+          <p className="sdc-eyebrow">the internet&apos;s coziest dog club</p>
+          <h2 id="sdc-intro-title">Every nap deserves a post.</h2>
+          <p>{site.hero.subheading} Share a photo of your sleeping dog for free. No wallet required.</p>
+          <button className="plank slat" type="button" onClick={() => scrollToId("corkboard")}>Explore the Nap Gallery</button>
+          <p className="sdc-soon">Photo uploads coming soon</p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="sdc-art" src={asset("/sdc/brand/sleepy-pack-art.jpg")} alt="Illustration of three sleeping puppies. Decorative art, not a community photo." width="640" height="480" />
+        </section>
         <section className="scene gut" id="notebook" data-section="notebook" aria-labelledby="who-h">
-          <span className="label slat">his notebook</span>
+          <span className="label slat">the club notebook</span>
           <div className="notebook">
             <div className="nb">
               <div>
@@ -270,26 +290,27 @@ export default function EepyExperience() {
               <figure className="polaroid">
                 <span className="tape" aria-hidden="true" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={asset(media.portrait)} alt="Eepy in his puffy jacket on a mountaintop, eyes closed" />
-                <figcaption>me on a hike (once)</figcaption>
+                <img src={asset(media.portrait)} alt="Sample portrait of a puppy on a hike. Not a club submission." />
+                <figcaption>sample portrait · not a club submission</figcaption>
               </figure>
             </div>
           </div>
         </section>
-        <section className="scene napspot gut" id="nap" data-section="nap" aria-label="Eepy sleeping">
-          <span className="label slat">his nap spot</span>
+        <section className="scene napspot gut" id="nap" data-section="nap" aria-label="the nap zone">
+          <span className="label slat">the nap zone</span>
           <div className="napframe brick">
             <div className="stage2">
-              <video autoPlay muted loop playsInline preload="metadata" poster={asset(media.napPoster)} aria-label="Eepy asleep on his couch hugging his duck">
+              <video autoPlay muted loop playsInline preload="metadata" poster={asset(media.napPoster)} aria-label="Demo footage of a puppy asleep on a couch. Not a club submission.">
                 <source src={asset(media.napVideo)} type="video/mp4" />
               </video>
               <div className="zzz" aria-hidden="true"><b>z</b><b>z</b><b>Z</b></div>
             </div>
           </div>
-          <div className="sticky">eepy is currently sleeping...<small>asleep for <span>{hours}h {minutes}m</span>. pls do not wake.</small></div>
+          <div className="sticky">the nap zone is quiet right now...<small>asleep for <span>{hours}h {minutes}m</span>. pls do not wake.</small></div>
         </section>
-        <section className="scene gut" id="corkboard" data-section="corkboard" aria-label="his corkboard">
-          <span className="label slat">his corkboard</span>
+        <section className="scene gut" id="corkboard" data-section="corkboard" aria-label="the nap gallery">
+          <span className="label slat">the nap gallery</span>
+          <p className="sdc-sample">sample gallery · these photos are not club submissions</p>
           <div className="board brick">
             <div className="cork">
               <div className="pins">
@@ -307,18 +328,20 @@ export default function EepyExperience() {
       </main>
       <footer className="foot gut" id="footer" data-section="footer">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="foot-brand" src={asset(site.logo)} alt="Eepy Dog logo" width="46" height="46" />
+        <img className="foot-brand" src={asset(site.logo)} alt="Sleepy Dogs Club logo" width="46" height="46" />
         <div className="links">
           <button className="plank slat" type="button" data-link-role="x" onClick={() => openExternal(site.xUrl, "x link coming soon")}>x</button>
           <button className="plank slat" type="button" data-link-role="community" onClick={() => openExternal(site.communityUrl, "community link coming soon")}>community</button>
           <button className="plank slat" type="button" data-link-role="uniswap" onClick={() => openExternal(swapLink, "uniswap link appears when the ethereum CA is set")}>uniswap</button>
           <button className="plank slat" type="button" data-link-role="etherscan" onClick={() => openExternal(tokenLink, "etherscan link appears when the ethereum CA is set")}>etherscan</button>
         </div>
+        <p className="sdc-signoff">see you after the next nap.</p>
+        <p>{`${site.network} · $${site.ticker}`}</p>
         <p>{site.quietLine}</p>
         <p>{site.memeNote}</p>
         <p>{site.footerNote}</p>
       </footer>
-      <div className={`radio slat${playing ? " on" : ""} ${volumeClass}`} role="region" aria-label="Eepy FM music player">
+      <div className={`radio slat${playing ? " on" : ""} ${volumeClass}`} role="region" aria-label="nap.fm music player">
         <button className="radio__screen" type="button" onClick={toggle} aria-label={playing ? "Pause" : "Play"}>
           <span className={playing ? "scroll" : ""}>♪ {String(track.id).padStart(2, "0")} {track.name}</span>
         </button>
@@ -337,14 +360,14 @@ export default function EepyExperience() {
       </div>
       {songsOpen && (
         <div className="tracks slat" id="tracks" role="dialog" aria-label="Choose a song">
-          <p>eepy fm · pick a song</p>
+          <p>nap.fm · pick a song</p>
           {tracks.map((item, index) => (
             <button key={item.id} type="button" data-link-role="song" aria-current={index === trackIndex ? "true" : undefined} onClick={() => { void playTrack(index); setSongsOpen(false); }}>
               <b>{String(item.id).padStart(2, "0")}</b>
               <span>{item.name}</span>
             </button>
           ))}
-          <p className="demo-note">demonstration audio. not the original eepy fm recordings.</p>
+          <p className="demo-note">demonstration audio. not licensed club recordings.</p>
         </div>
       )}
       <audio ref={audioRef} src={asset(track.src)} preload="none" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onEnded={() => void playTrack((trackIndex + 1) % tracks.length)} />

@@ -9,6 +9,7 @@ import { csvCell } from './csv.ts'
 import { createApp, type AppOptions } from './createApp.ts'
 import { maskIp, resolveVisitorIp } from './ip.ts'
 import { fileInside, isDashboardPath, normalizeSitePath, withDashboardRobots } from './static.ts'
+import { resolveDashboardPassword } from './passwordPolicy.ts'
 import { formatNy, startOfNyDay } from './time.ts'
 
 const PASSWORD = 'FixturePass-1'
@@ -555,6 +556,14 @@ test('a repeat visit stays one person and shows a coarse location', async () => 
   } finally {
     await session.stop()
   }
+})
+
+test('a public tracker refuses a missing or default dashboard password', () => {
+  assert.throws(() => resolveDashboardPassword(undefined, true), /DASHBOARD_PASSWORD/)
+  assert.throws(() => resolveDashboardPassword('aaaa', true), /DASHBOARD_PASSWORD/)
+  assert.throws(() => resolveDashboardPassword('short', true), /DASHBOARD_PASSWORD/)
+  assert.equal(resolveDashboardPassword(undefined, false), 'aaaa')
+  assert.equal(resolveDashboardPassword('FixturePass-1', true), 'FixturePass-1')
 })
 
 test('localhost production traffic is development and excluded by default', async () => {

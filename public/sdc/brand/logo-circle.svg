@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title"><title id="title">Sleepy Dogs Club logo</title>
+<circle cx="128" cy="128" r="122" fill="#7fa7d8" stroke="#efe6d2" stroke-width="8"/>
+<path d="M36 168 Q128 211 220 168 L220 211 Q127 259 36 210 Z" fill="#61765d"/>
+<path d="M57 126 Q36 82 61 83 Q89 86 84 124" fill="#977151" stroke="#3f382f" stroke-width="4"/>
+<path d="M179 124 Q173 81 201 86 Q225 93 203 132" fill="#977151" stroke="#3f382f" stroke-width="4"/>
+<ellipse cx="130" cy="142" rx="77" ry="65" fill="#e9bb87" stroke="#3f382f" stroke-width="5"/>
+<path d="M83 135 Q99 146 116 132 M146 132 Q162 145 178 133" stroke="#3f382f" stroke-width="6" stroke-linecap="round" fill="none"/>
+<ellipse cx="130" cy="154" rx="12" ry="8" fill="#3f382f"/>
+<path d="M130 160 Q126 169 113 172 M130 160 Q137 170 151 172" fill="none" stroke="#3f382f" stroke-width="4" stroke-linecap="round"/>
+<path d="M66 49 L80 49 L67 62 L79 62 M88 36 L103 36 L91 49 L104 49" stroke="#fff1d9" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M178 47 A19 19 0 1 0 197 22 A15 15 0 0 1 178 47" fill="#ffe7ad"/>
+</svg>

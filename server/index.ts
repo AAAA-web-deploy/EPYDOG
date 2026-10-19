@@ -1,6 +1,7 @@
 import { createServer } from 'node:http'
 import path from 'node:path'
 import { createApp } from './createApp.ts'
+import { resolveDashboardPassword } from './passwordPolicy.ts'
 import { serveStatic } from './static.ts'
 
 const dataDir = process.env.EEPY_DATA_DIR ?? path.join(process.cwd(), 'data')
@@ -17,9 +18,17 @@ const allowedOrigins = (process.env.ALLOWED_ORIGINS ?? 'https://aaaa-web-deploy.
   .map((item) => item.trim())
   .filter(Boolean)
 
+let bootstrapPassword: string
+try {
+  bootstrapPassword = resolveDashboardPassword(process.env.DASHBOARD_PASSWORD, trustProxy)
+} catch (error) {
+  console.error(error instanceof Error ? error.message : error)
+  process.exit(1)
+}
+
 const app = createApp({
   dataDir,
-  bootstrapPassword: process.env.DASHBOARD_PASSWORD || 'aaaa',
+  bootstrapPassword,
   nodeEnv: process.env.NODE_ENV ?? 'production',
   trustProxy,
   trustedProxies,

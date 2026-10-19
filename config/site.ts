@@ -3,38 +3,38 @@
  * Leave contractAddress empty until a real 0x address exists. Do not paste a Solana address here.
  */
 export const site = {
-  projectName: "eepy dog",
-  ticker: "EEPY",
+  projectName: "Sleepy Dogs Club",
+  ticker: "ZZZPUPS",
   network: "Ethereum Mainnet",
   chainId: 1,
   contractAddress: "",
-  logo: "/brand/replace-with-your-logo.svg",
+  logo: "/sdc/brand/logo-circle.svg",
   xUrl: "",
   communityUrl: "",
   uniswapBaseUrl: "https://app.uniswap.org/swap?chain=ethereum&outputCurrency=",
   etherscanBaseUrl: "https://etherscan.io/token/",
-  title: "eepy — just a little dog",
-  description: "just a little dog living his best life.",
+  title: "Sleepy Dogs Club | Every Nap Deserves a Post",
+  description: "A cozy community for sharing real photos of sleeping dogs. Meet the nap pack, discover hilarious sleepy pups, and join for free.",
   hero: {
-    subheading: "just a little dog living his best life.",
+    subheading: "Real dogs. Legendary naps. Every nap deserves a post.",
   },
   story: {
-    title: "who is eepy?",
+    title: "what is sleepy dogs club?",
     paragraphs: [
-      "eepy is just a little dog.",
-      "he likes sleeping, listening to music, and doing absolutely nothing.",
-      "he's just living his best life.",
+      "We collect one very important thing: photos of dogs asleep.",
+      "Post your sleepy pup, discover the nap pack, and enjoy the funniest nap faces on the internet.",
+      "This is a free dog-lover community. You don't need crypto to join.",
     ],
     facts: [
-      ["hobbies", "naps"],
-      ["other hobbies", "also naps"],
-      ["favorite spot", "this bench"],
+      ["membership", "free"],
+      ["official activity", "napping"],
+      ["club rule", "let sleeping dogs lie"],
     ],
   },
-  quietLine: "you can sit here as long as you're quiet.",
-  memeNote: "$eepy is a meme coin with no intrinsic value or expectation of financial return.",
+  quietLine: "quiet please. the club is napping.",
+  memeNote: "ZZZPUPS is an independent, high-risk meme token; joining and sharing dog photos is free and never requires holding tokens.",
   footerNote:
-    "Independent Ethereum project. Not affiliated with or endorsed by the Solana Eepy Dog team.",
+    "The photo-sharing community is free to join. $ZZZPUPS is a separate, high-risk Ethereum meme token and is not affiliated with the Solana Eepy Dog team.",
 } as const;
 
 export const hasValidContract = /^0x[a-fA-F0-9]{40}$/.test(site.contractAddress);

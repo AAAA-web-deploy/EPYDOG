@@ -260,7 +260,7 @@ export default function Dashboard() {
         : undefined;
     if (phase !== 'ready') {
         return (<main className="dash" id="dashboard-main">
-        <h1>Private Visitor Dashboard</h1>
+        <h1>Sleepy Dogs Club visitor dashboard</h1>
         {phase === 'checking' ? (<p role="status">Checking session…</p>) : (<form className="dash-card" onSubmit={onLogin}>
             {loginNotice && <p role="status">{loginNotice}</p>}
             <label htmlFor="dashboard-password">Password</label>
@@ -276,7 +276,7 @@ export default function Dashboard() {
     }
     return (<main className="dash" id="dashboard-main">
       <div className="dash-top">
-        <h1>Private Visitor Dashboard</h1>
+        <h1>Sleepy Dogs Club visitor dashboard</h1>
         <button className="btn btn-ghost" type="button" onClick={() => void logout()}>
           Log out
         </button>

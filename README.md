@@ -13,7 +13,7 @@ npm run check:assets
 npm run dev
 ```
 
-`npm run build` writes a static site to `out/`. `npm run tracker` serves that folder and the visitor API at http://127.0.0.1:4173/ . The private dashboard is http://127.0.0.1:4173/dashboard/ and the initial password is `aaaa`.
+`npm run build` writes a static site to `out/`. `npm run tracker` serves that folder and the visitor API at http://127.0.0.1:4173/ . The private dashboard is http://127.0.0.1:4173/dashboard/ . A local tracker with no password set still boots with `aaaa`. A public tracker (`TRUST_PROXY=1`) refuses to start unless `DASHBOARD_PASSWORD` is a unique password of at least 8 characters.
 
 GitHub Pages publishes the same export from `.github/workflows/pages.yml` at `/EPYDOG/`. Pages cannot store visits. Point `NEXT_PUBLIC_ANALYTICS_ORIGIN` at an HTTPS copy of this tracker, and set `ALLOWED_ORIGINS` to `https://aaaa-web-deploy.github.io`, when you want the live site to record visitors.
 

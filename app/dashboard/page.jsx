@@ -1,7 +1,7 @@
 import Dashboard from "./dashboard-client";
 
 export const metadata = {
-  title: "Eepy Dog visitor dashboard",
+  title: "Sleepy Dogs Club visitor dashboard",
   robots: { index: false, follow: false },
 };
 
