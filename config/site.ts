@@ -8,7 +8,7 @@ export const site = {
   network: "Ethereum Mainnet",
   chainId: 1,
   contractAddress: "",
-  logo: "/sdc/brand/logo-circle.svg",
+  logo: "/sdc/brand/logo.png",
   xUrl: "",
   communityUrl: "",
   uniswapBaseUrl: "https://app.uniswap.org/swap?chain=ethereum&outputCurrency=",

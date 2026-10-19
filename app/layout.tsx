@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     icon: [
       { url: asset("/sdc/brand/favicon.ico") },
       { url: asset("/sdc/brand/favicon-32.png"), sizes: "32x32", type: "image/png" },
-      { url: asset(site.logo), type: "image/svg+xml" },
+      { url: asset(site.logo), type: "image/png" },
     ],
     apple: asset("/sdc/brand/apple-touch-icon.png"),
   },

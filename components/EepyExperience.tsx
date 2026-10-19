@@ -242,7 +242,7 @@ export default function EepyExperience() {
       <header className="hero" id="hero" data-section="hero">
         <a className="sdc-brand" href="#notebook">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={asset(site.logo)} alt="" width="28" height="28" />
+          <img src={asset(site.logo)} alt="" width="56" height="56" />
           <span className="sdc-brand__full">sleepy dogs club</span>
           <span className="sdc-brand__short">SDC</span>
           <strong className="sdc-header-ticker">$ZZZPUPS</strong>
@@ -336,7 +336,7 @@ export default function EepyExperience() {
       </main>
       <footer className="foot gut" id="footer" data-section="footer">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="foot-brand" src={asset(site.logo)} alt="Sleepy Dogs Club logo" width="46" height="46" />
+        <img className="foot-brand" src={asset(site.logo)} alt="Sleepy Dogs Club logo" width="92" height="92" />
         <div className="links">
           <button className="plank slat" type="button" data-link-role="x" onClick={() => openExternal(site.xUrl, "x link coming soon")}>x</button>
           <button className="plank slat" type="button" data-link-role="community" onClick={() => openExternal(site.communityUrl, "community link coming soon")}>community</button>
