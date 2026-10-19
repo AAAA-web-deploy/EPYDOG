@@ -240,13 +240,15 @@ export default function EepyExperience() {
       </div>
       <Leaves />
       <header className="hero" id="hero" data-section="hero">
-        <a className="sdc-brand" href="#notebook">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={asset(site.logo)} alt="" width="56" height="56" />
-          <span className="sdc-brand__full">sleepy dogs club</span>
-          <span className="sdc-brand__short">SDC</span>
-          <strong className="sdc-header-ticker">$ZZZPUPS</strong>
-        </a>
+        <div className="sdc-brand">
+          <a className="sdc-brand__club" href="#notebook">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={asset(site.logo)} alt="" width="56" height="56" />
+            <span className="sdc-brand__full">sleepy dogs club</span>
+            <span className="sdc-brand__short">SDC</span>
+          </a>
+          <button className="sdc-header-ticker" type="button" onClick={() => scrollToId("token")}>$ZZZPUPS</button>
+        </div>
         <nav className="corner" aria-label="Sleepy Dogs Club links">
           <button className="plank slat" type="button" onClick={() => scrollToId("sdc-gallery")}>gallery</button>
           <button className="plank slat" type="button" data-link-role="x" onClick={() => openExternal(site.xUrl, "x link coming soon")}>x</button>
@@ -261,7 +263,7 @@ export default function EepyExperience() {
         </nav>
         <div className="sdc-hero-identity">
           <h1>Sleepy Dogs Club</h1>
-          <p className="sdc-hero-ticker">$ZZZPUPS</p>
+          <button className="sdc-hero-ticker" type="button" onClick={() => scrollToId("token")}>$ZZZPUPS</button>
         </div>
         <div className="frame brick">
           <div className="stage">
@@ -293,7 +295,7 @@ export default function EepyExperience() {
             </div>
           </div>
           <div className="sticky">the nap zone is quiet right now...<small>asleep for <span>{hours}h {minutes}m</span>. pls do not wake.</small></div>
-          <div className="notebook token-notebook">
+          <div className="notebook token-notebook" id="token">
             <div className="nb">
               <div>
                 <h2>the token</h2>

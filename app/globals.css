@@ -98,7 +98,11 @@ button { font: inherit; color: inherit; }
 .polaroid figcaption { position: absolute; left: 0; right: 0; bottom: 6px; text-align: center; font-size: 17px; }
 .tape { position: absolute; width: 76px; height: 22px; background: rgba(214,196,150,.75); top: -11px; left: 50%; transform: translateX(-50%) rotate(-5deg); }
 
-.napspot { display: flex; flex-direction: column; align-items: center; padding-top: clamp(28px, 4vw, 56px); }
+.napspot { display: flex; flex-direction: column; align-items: center; padding-top: clamp(28px, 4vw, 56px); padding-bottom: 12px; }
+#notebook.scene { padding-top: 16px; }
+#token { scroll-margin-top: 20px; }
+.sdc-brand__club { display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }
+button.sdc-hero-ticker { border: 0; background: transparent; cursor: pointer; }
 .token-notebook { margin-top: 42px; transform: rotate(1deg); max-width: 860px; }
 .token-notebook .polaroid { width: clamp(148px, 22vw, 190px); }
 .token-notebook .polaroid img { aspect-ratio: 1; object-fit: contain; filter: none; background: #fffaf0; }

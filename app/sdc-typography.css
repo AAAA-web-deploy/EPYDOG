@@ -5,13 +5,13 @@
 .sdc-entry-ticker { color:#fbd4a1; font-family:var(--font-mono,monospace); font-size:clamp(1.15rem,2.4vw,2.4rem); font-weight:900; letter-spacing:.08em; margin:14px auto 23px; text-align:center; text-shadow:0 2px 14px #141f35aa; }
 .brand-mark { gap:12px; max-width: min(100%, 380px); }
 .brand-mark>span { font-size:clamp(1.08rem,1.8vw,1.8rem)!important; line-height:1.1; font-weight:900; }
-.sdc-header-ticker { display:inline-flex; border:1px solid #394353; font-size:clamp(.85rem,1.15vw,1.1rem); font-family:var(--font-mono,monospace); letter-spacing:.02em; padding:6px 10px; border-radius:6px; background:#dcd8f8; color:#2e3550; }
+.sdc-header-ticker { display:inline-flex; border:1px solid #394353; font-size:clamp(.85rem,1.15vw,1.1rem); font-family:var(--font-mono,monospace); letter-spacing:.02em; padding:6px 10px; border-radius:6px; background:#dcd8f8; color:#2e3550; cursor:pointer; }
 .header-nav a { font-size:clamp(.86rem,1.2vw,1.2rem)!important; font-weight:700; }
 .hero-center { max-width:min(95vw,1250px)!important; width:100%; }
 .hero-title { font-size:clamp(3.5rem,9.5vw,10.5rem)!important; line-height:.91!important; letter-spacing:-.072em!important; text-wrap:balance; }
 .hero-kicker { font-size:clamp(.95rem,1.5vw,1.6rem)!important; }
 .hero-subtitle { font-size:clamp(1.2rem,2.7vw,2.4rem)!important; line-height:1.28!important; max-width:740px; margin-left:auto; margin-right:auto; }
-.sdc-hero-ticker { display:inline-block; font-size:clamp(1.55rem,4vw,4rem); font-weight:900; line-height:1.1; font-family:var(--font-mono,monospace); color:#ffe5b9; text-shadow:0 3px 16px rgba(14,26,38,.65); margin:12px 0; letter-spacing:.025em; }
+.sdc-hero-ticker { display:inline-block; border:0; background:transparent; cursor:pointer; font-size:clamp(1.55rem,4vw,4rem); font-weight:900; line-height:1.1; font-family:var(--font-mono,monospace); color:#ffe5b9; text-shadow:0 3px 16px rgba(14,26,38,.65); margin:12px 0; letter-spacing:.025em; }
 .sdc-hero-ticker span { color:#fff; }
 .section-overline { font-size:clamp(.9rem,1.2vw,1.15rem)!important; }
 .notebook-paper h2 { font-size:clamp(2.8rem,5vw,5.6rem)!important; line-height:1.05; }
