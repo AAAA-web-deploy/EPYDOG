@@ -30,6 +30,8 @@
 .form input[type="file"] { max-width:100%; color:#3f4658; font-size:15px; }
 .form input:focus-visible,.form textarea:focus-visible { outline:3px solid #7785ca; outline-offset:2px; }
 .filePicker { border:2px dashed #a1a8c0; padding:20px; border-radius:8px; background:#f5f3fe; }
+.filePicker.dragging { border-color:#364159; background:#e7f0dd; }
+.scrapbookCard button { white-space:nowrap; padding:7px 9px; border:0; border-radius:5px; background:#ded8f6; font-weight:800; font-size:14px; cursor:pointer; }
 .filePicker>span { color:#303d56!important; font-size:19px; }
 .filePicker small { font-size:13px; color:#555; font-weight:400; }
 .preview img { max-height:300px; object-fit:contain; border-radius:8px; }
@@ -51,6 +53,14 @@
 .placeholder { text-align:center; border:2px dashed #9a9aa0; border-radius:10px; padding:32px; font-family:var(--font-hand,cursive); font-size:23px; }
 .placeholder strong { font-weight:900; }
 .photoGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:23px; max-width:1500px; margin:0 auto 65px; }
+.turnstile { min-height:65px; }
+.progress { display:flex; align-items:center; gap:12px; margin:0; }
+.progress progress { width:min(280px,100%); height:14px; }
+.more { max-width:1500px; margin:-30px auto 50px; text-align:center; }
+.more button { border:2px solid #364159; background:#fff; border-radius:8px; padding:10px 16px; font-weight:800; }
+.reportForm { display:grid; gap:10px; margin-top:10px; }
+.reportForm textarea { width:100%; border:2px solid #a8abb3; border-radius:8px; padding:8px; font:inherit; }
+.reportForm button { justify-self:start; border:2px solid #364159; background:#fff; border-radius:8px; padding:8px 12px; font-weight:800; }
 .photoCard { background:white; padding:12px 12px 16px; border:2px solid #ded7ce; border-radius:9px; box-shadow:4px 6px 0 #d5cbd0; min-width:0; }
 .photoCard>img { width:100%; height:clamp(200px,23vw,350px); object-fit:cover; border-radius:4px; background:#ebe6e1; }
 .photoDetails { padding:14px 5px 6px; }
@@ -59,7 +69,8 @@
 .photoDetails p { overflow-wrap:anywhere; font-family:var(--font-hand,cursive); font-size:clamp(17px,1.5vw,22px); margin:8px 0; }
 .photoActions { display:flex; gap:11px; align-items:center; padding:6px 3px 0; }
 .photoActions button { border:1px solid #586174; border-radius:5px; background:#edf1ff; padding:9px 12px; font-size:14px; font-weight:700; }
-.photoActions button:last-child { background:transparent; border:0; color:#626679; }
+.photoActions button.remove { background:#fff; color:#626679; }
+.trialNote { max-width:1500px; margin:0 auto 22px; font-size:17px; line-height:1.5; }
 .scrapbookHead { display:flex; justify-content:space-between; flex-wrap:wrap; align-items:end; gap:8px; max-width:1500px; margin:0 auto 20px; }
 .scrapbookHead h3 { font-size:clamp(26px,3.4vw,45px); margin:0; }
 .scrapbookHead p { font-family:var(--font-hand,cursive); font-size:18px; margin:0; }
@@ -68,10 +79,10 @@
 .scrapbookCard img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; }
 .scrapbookCard>div { display:flex; gap:8px; justify-content:space-between; align-items:center; padding:10px; font-size:14px; }
 .scrapbookCard span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.scrapbookCard a { white-space:nowrap; padding:7px 9px; border-radius:5px; background:#ded8f6; text-decoration:none; font-weight:800; }
 .lastLine { max-width:1500px; margin:65px auto 0; border-top:2px solid #6c6d70; padding-top:15px; display:flex; justify-content:space-between; gap:10px; color:#525d73; font-family:var(--font-mono,monospace); font-size:clamp(11px,1vw,15px); }
 .lastLine strong { color:#353e52; }
 @media(max-width:900px) { .heading { grid-template-columns:1fr 330px; gap:35px; } .photoGrid { grid-template-columns:repeat(2,minmax(0,1fr)); } .scrapbook { grid-template-columns:repeat(3,minmax(0,1fr)); } }
 @media(max-width:710px) { .heading { grid-template-columns:1fr; } .artwork { max-width:440px; margin:0 auto; transform:none; } .twoFields { grid-template-columns:1fr; } .photoGrid { gap:12px; } .scrapbook { grid-template-columns:repeat(2,minmax(0,1fr)); } .topline>span:last-child,.lastLine>span { display:none; } .lastLine { justify-content:center; text-align:center; } }
-@media(max-width:480px) { .gallery { padding:30px 15px 34px; } .heading h2 { font-size:clamp(45px,13.5vw,70px); } .photoGrid { grid-template-columns:1fr; } .photoCard>img { height:300px; } .galleryHead { display:block; } .galleryHead button { margin-top:16px; } .scrapbookCard>div { align-items:start; flex-direction:column; } .scrapbookCard a { align-self:stretch; text-align:center; } .formBottom button { width:100%; } }
+@media(max-width:640px) { .photoGrid { grid-template-columns:1fr; } }
+@media(max-width:480px) { .gallery { padding:30px 15px 34px; } .heading h2 { font-size:clamp(45px,13.5vw,70px); } .photoCard>img { height:300px; } .galleryHead { display:block; } .galleryHead button { margin-top:16px; } .scrapbookCard>div { align-items:start; flex-direction:column; } .scrapbookCard button { align-self:stretch; text-align:center; } .formBottom button { width:100%; } }
 @media(prefers-reduced-motion:reduce) { .primary,.secondary { transition:none; } }

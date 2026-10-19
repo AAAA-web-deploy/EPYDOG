@@ -5,7 +5,9 @@ out
 *.log
 .env*
 !.env.example
-!.env.sdc.example
+!.env.gallery.example
+.wrangler
+services/photo-worker/.dev.vars
 .DS_Store
 *.tsbuildinfo
 data

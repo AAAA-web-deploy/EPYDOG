@@ -1,0 +1,16 @@
+name = "sleepy-dogs-photos"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+# The bucket is private. Do not add a public r2.dev domain.
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "sleepy-dogs-photos"
+
+[vars]
+ALLOWED_ORIGINS = "https://aaaa-web-deploy.github.io"
+UPLOADS_PER_DAY = "3"
+# TURNSTILE_SECRET_KEY and MODERATION_TOKEN are secrets.
+# Set them with: npx wrangler secret put TURNSTILE_SECRET_KEY --config services/photo-worker/wrangler.toml
+# Never set TURNSTILE_TEST_MODE here. Test mode is for the offline test suite only.

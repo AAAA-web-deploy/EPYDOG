@@ -1,0 +1,7 @@
+# Copy to services/photo-worker/.dev.vars for `wrangler dev`. Do not commit .dev.vars.
+# Use Cloudflare's published Turnstile test secret only on your own machine.
+# Do not put these values in the Next.js site.
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+MODERATION_TOKEN=replace-with-a-long-random-owner-token
+ALLOWED_ORIGINS=https://aaaa-web-deploy.github.io,http://127.0.0.1:4321,http://localhost:3000
+UPLOADS_PER_DAY=3

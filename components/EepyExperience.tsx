@@ -276,9 +276,9 @@ export default function EepyExperience() {
         <section className="sdc-intro gut" aria-labelledby="sdc-intro-title">
           <p className="sdc-eyebrow">the internet&apos;s coziest dog club</p>
           <h2 id="sdc-intro-title">Every nap deserves a post.</h2>
-          <p>{site.hero.subheading} Share a photo of your sleeping dog for free. No wallet required.</p>
+          <p>{site.hero.subheading} Got a sleepy dog? Show us!</p>
           <button className="plank slat" type="button" onClick={() => scrollToId("sdc-gallery")}>Explore the Nap Gallery</button>
-          <p className="sdc-soon">Photo uploads coming soon</p>
+          <button className="plank slat" type="button" onClick={() => { scrollToId("sdc-gallery"); window.dispatchEvent(new Event("sdc-open-upload")); }}>Add Your Sleeping Dog</button>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className="sdc-art" src={asset("/sdc/brand/sleepy-pack-art.jpg")} alt="Illustration of three sleeping puppies. Decorative art, not a community photo." width="640" height="480" />
         </section>
